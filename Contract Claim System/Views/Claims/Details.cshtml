@@ -1,0 +1,314 @@
+﻿@model Contract_Claim_System.Models.Claim
+@{
+    ViewData["Title"] = "Claim Details";
+    // Ensure ViewBag.StatusChanges is cast correctly and defaults to an empty list if null
+    var statusChanges = (ViewBag.StatusChanges as List<Contract_Claim_System.Models.ClaimStatusChange>) ?? new List<Contract_Claim_System.Models.ClaimStatusChange>();
+    var role = Context.Session.GetString("UserRole");
+
+    // Dynamic back button logic
+    string backAction;
+    string backController;
+    string backText;
+
+    if (role == "Academic Manager")
+    {
+        backAction = "List";
+        backController = "Claims";
+        backText = "Back to All Claims";
+    }
+    else if (role == "Project Coordinator")
+    {
+        backAction = "Index";
+        backController = "ProjectCoordinator";
+        backText = "Back to Coordinator Dashboard";
+    }
+    else // Default for Lecturer
+    {
+        backAction = "Track";
+        backController = "Claims";
+        backText = "Back to My Claims";
+    }
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2><i class="bi bi-file-earmark-text"></i> Claim Details</h2>
+        <p class="text-muted">Complete information and status history for Claim #@Model.ClaimId</p>
+    </div>
+    <div>
+        <a asp-controller="@backController" asp-action="@backAction" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> @backText
+        </a>
+    </div>
+</div>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show">
+        <i class="bi bi-check-circle"></i> @TempData["Message"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-info-circle"></i> Claim Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="text-muted">Claim ID</label>
+                        <p class="fw-bold"><code>@Model.ClaimId</code></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted">Current Status</label>
+                        <p>
+                            @{
+                                string badgeClass = Model.Status switch
+                                {
+                                    "Approved" => "bg-success",
+                                    "Rejected" => "bg-danger",
+                                    _ => "bg-warning text-dark" // Default to Pending
+                                };
+                                string iconClass = Model.Status switch
+                                {
+                                    "Approved" => "bi-check-circle",
+                                    "Rejected" => "bi-x-circle",
+                                    _ => "bi-clock"
+                                };
+                            }
+                            <span class="badge @badgeClass fs-6">
+                                <i class="bi @iconClass"></i> @Model.Status
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="text-muted">Lecturer Name</label>
+                        <p class="fw-bold">@Model.LecturerDisplayName</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted">Lecturer Email</label>
+                        <p>@Model.LecturerName</p>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="text-muted">Module</label>
+                        <p><span class="badge bg-info fs-6">@Model.Module</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted">Period</label>
+                        <p class="fw-bold">@Model.Period</p>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="text-muted">Hours Worked</label>
+                        <p class="fw-bold text-primary">@Model.HoursWorked hours</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted">Hourly Rate</label>
+                        <p class="fw-bold">@Model.HourlyRate.ToString("C")</p>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label class="text-muted">Total Amount Claimed</label>
+                        <p class="fw-bold text-success fs-3">@Model.TotalAmount.ToString("C")</p>
+                    </div>
+                </div>
+
+                <hr />
+
+                @* --- Supporting Document Section for byte[] data --- *@
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label class="text-muted">Supporting Document</label>
+                        @if (Model.DocumentData != null && Model.DocumentData.Length > 0)
+                        {
+                            <div class="card bg-light">
+                                <div class="card-body p-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="bi bi-file-earmark-text text-primary" style="font-size: 2rem;"></i>
+                                            <span class="ms-2 fw-bold">@Model.DocumentFileName</span>
+                                        </div>
+                                        <a asp-controller="Claims" asp-action="DownloadDocument" asp-route-id="@Model.ClaimId"
+                                           class="btn btn-primary btn-sm" target="_blank" title="Download Document">
+                                            <i class="bi bi-download"></i> View/Download
+                                        </a>
+                                    </div>
+                                    <small class="text-muted d-block mt-2">
+                                        <i class="bi bi-info-circle"></i> File Type: @Model.DocumentContentType
+                                    </small>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <p class="text-muted fst-italic">
+                                <i class="bi bi-x-circle"></i> No supporting document was uploaded with this claim.
+                            </p>
+                        }
+                    </div>
+                </div>
+
+                @if (!string.IsNullOrEmpty(Model.Notes))
+                {
+                    <hr />
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <label class="text-muted">Notes</label>
+                            <p class="border rounded p-3 bg-light">@Model.Notes</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        @if (statusChanges.Any())
+        {
+            <div class="card shadow">
+                <div class="card-header" style="background-color: #6f42c1; color: white;">
+                    <h5 class="mb-0"><i class="bi bi-clock-history"></i> Status Change History</h5>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        @* Sort descending to show latest status change first *@
+                        @foreach (var change in statusChanges.OrderByDescending(c => c.ChangedDate))
+                        {
+                            <div class="mb-4 border-start border-3 ps-3" style="border-color: #6f42c1 !important;">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-1">
+                                        <span class="badge bg-secondary">@change.PreviousStatus</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                        @{
+                                            string newStatusBadgeClass = change.NewStatus switch
+                                            {
+                                                "Approved" => "bg-success",
+                                                "Rejected" => "bg-danger",
+                                                _ => "bg-warning text-dark"
+                                            };
+                                        }
+                                        <span class="badge @newStatusBadgeClass">@change.NewStatus</span>
+                                    </h6>
+                                    <small class="text-muted">@change.ChangedDate.ToString("MMM dd, yyyy hh:mm tt")</small>
+                                </div>
+                                <p class="mb-1"><strong>Reason:</strong> @change.Reason</p>
+                                <small class="text-muted">Changed by: @change.ChangedBy</small>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="col-md-4">
+        @* --- Role-Based Actions (Project Coordinator and Academic Manager) --- *@
+        @if (role == "Academic Manager" || role == "Project Coordinator")
+        {
+            <div class="card shadow mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0"><i class="bi bi-gear"></i> Actions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        @if (role == "Project Coordinator")
+                        {
+                            @* Edit and Change Status are Project Coordinator specific *@
+                            <a asp-controller="ProjectCoordinator" asp-action="Edit" asp-route-id="@Model.ClaimId"
+                               class="btn btn-warning">
+                                <i class="bi bi-pencil"></i> Edit Claim Details
+                            </a>
+                            <a asp-controller="ProjectCoordinator" asp-action="ChangeStatus" asp-route-id="@Model.ClaimId"
+                               class="btn" style="background-color: #6f42c1; color: white;">
+                                <i class="bi bi-arrow-repeat"></i> Change Status
+                            </a>
+                            <hr />
+                        }
+
+                        @* Quick Approve/Reject are available for Academic Manager and Project Coordinator if status is Pending *@
+                        @if (Model.Status == "Pending")
+                        {
+                            <a asp-controller="Claims" asp-action="Approve" asp-route-id="@Model.ClaimId"
+                               class="btn btn-success" onclick="return confirm('Are you sure you want to approve this claim?')">
+                                <i class="bi bi-check-circle"></i> Quick Approve
+                            </a>
+                            <a asp-controller="Claims" asp-action="Reject" asp-route-id="@Model.ClaimId"
+                               class="btn btn-danger" onclick="return confirm('Are you sure you want to reject this claim?')">
+                                <i class="bi bi-x-circle"></i> Quick Reject
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="card shadow">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0"><i class="bi bi-clock"></i> Timestamps</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="text-muted small">Submitted Date</label>
+                    <p class="mb-0">@Model.SubmittedDate.ToString("MMMM dd, yyyy")</p>
+                    <small class="text-muted">@Model.SubmittedDate.ToString("hh:mm tt")</small>
+                </div>
+
+                <div class="mb-3">
+                    <label class="text-muted small">Submitted By</label>
+                    <p class="mb-0">@Model.SubmittedBy</p>
+                    <small class="text-muted">Role: @Model.SubmittedByRole</small>
+                </div>
+
+                @if (Model.ProcessedDate.HasValue)
+                {
+                    <div class="mb-3">
+                        <label class="text-muted small">Processed Date</label>
+                        <p class="mb-0">@Model.ProcessedDate.Value.ToString("MMMM dd, yyyy")</p>
+                        <small class="text-muted">@Model.ProcessedDate.Value.ToString("hh:mm tt")</small>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.ApprovedBy))
+                    {
+                        <div class="mb-3">
+                            <label class="text-muted small">Approved By</label>
+                            <p class="mb-0 text-success fw-bold">@Model.ApprovedBy</p>
+                        </div>
+                    }
+                    else if (!string.IsNullOrEmpty(Model.RejectedBy))
+                    {
+                        <div class="mb-3">
+                            <label class="text-muted small">Rejected By</label>
+                            <p class="mb-0 text-danger fw-bold">@Model.RejectedBy</p>
+                        </div>
+                    }
+                }
+
+                <div class="mb-3">
+                    <label class="text-muted small">Last Modified</label>
+                    <p class="mb-0">@Model.LastModified.ToString("MMMM dd, yyyy")</p>
+                    <small class="text-muted">@Model.LastModified.ToString("hh:mm tt")</small>
+                </div>
+
+                <div class="mb-0">
+                    <label class="text-muted small">Modified By</label>
+                    <p class="mb-0">@Model.ModifiedBy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

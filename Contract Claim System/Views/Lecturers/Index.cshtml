@@ -1,0 +1,133 @@
+﻿@model List<Contract_Claim_System.Models.Lecturer>
+@{
+    ViewData["Title"] = "Manage Lecturers";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2><i class="bi bi-people"></i> Manage Lecturers</h2>
+        <p class="text-muted">View and manage all registered lecturers</p>
+    </div>
+    <a asp-controller="Lecturers" asp-action="Create" class="btn btn-primary">
+        <i class="bi bi-plus-circle"></i> Add New Lecturer
+    </a>
+</div>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle"></i> @TempData["Message"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (Model == null || !Model.Any())
+{
+    <div class="card">
+        <div class="card-body text-center py-5">
+            <i class="bi bi-people" style="font-size: 4rem; color: #6c757d;"></i>
+            <h4 class="mt-3">No Lecturers Found</h4>
+            <p class="text-muted">No lecturers have been added to the system yet.</p>
+            <a asp-controller="Lecturers" asp-action="Create" class="btn btn-primary mt-2">
+                <i class="bi bi-plus-circle"></i> Add Your First Lecturer
+            </a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="card shadow-sm">
+        <div class="card-header bg-dark text-white">
+            <h5 class="mb-0"><i class="bi bi-list"></i> Lecturer List</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th style="width: 5%;">#</th>
+                            <th style="width: 25%;">Name</th>
+                            <th style="width: 15%;">Employee ID</th>
+                            <th style="width: 25%;">Email</th>
+                            <th style="width: 10%;" class="text-center">Claims</th>
+                            <th style="width: 20%;" class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int index = 1;
+                        }
+                        @foreach (var lecturer in Model)
+                        {
+                            <tr>
+                                <td>@index</td>
+                                <td>
+                                    <strong>@lecturer.Name</strong>
+                                </td>
+                                <td>
+                                    <span class="badge bg-secondary">@lecturer.EmployeeId</span>
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(lecturer.Email) && lecturer.Email != "N/A")
+                                    {
+                                        <a href="mailto:@lecturer.Email">@lecturer.Email</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">No email</span>
+                                    }
+                                </td>
+                                <td class="text-center">
+                                    @if (lecturer.TotalClaims > 0)
+                                    {
+                                        <span class="badge bg-info">@lecturer.TotalClaims</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-light text-dark">0</span>
+                                    }
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group" role="group">
+                                        <a asp-controller="Lecturers" asp-action="Details" asp-route-id="@lecturer.EmployeeId"
+                                           class="btn btn-sm btn-info" title="View Details">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <a asp-controller="Lecturers" asp-action="Edit" asp-route-id="@lecturer.EmployeeId"
+                                           class="btn btn-sm btn-warning" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <a asp-controller="Lecturers" asp-action="Delete" asp-route-id="@lecturer.EmployeeId"
+                                           class="btn btn-sm btn-danger" title="Delete"
+                                           onclick="return confirm('Are you sure you want to delete @lecturer.Name?')">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            index++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="bi bi-info-circle"></i> Total Lecturers: <strong>@Model.Count</strong>
+                </div>
+                <div class="col-md-6 text-end">
+                    <i class="bi bi-file-earmark-text"></i> Total Claims: <strong>@Model.Sum(l => l.TotalClaims)</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">

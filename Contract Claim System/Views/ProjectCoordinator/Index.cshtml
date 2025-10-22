@@ -1,0 +1,183 @@
+﻿@model List<Contract_Claim_System.Models.Claim>
+@{
+    ViewData["Title"] = "Project Coordinator - Claim Management";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2><i class="bi bi-kanban"></i> Project Coordinator - Claim Management</h2>
+            <p class="text-muted">Full administrative control over all claims with status tracking</p>
+        </div>
+    </div>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle"></i> @TempData["Message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @* <!-- Status Filter -->
+    <div class="col-md-4">
+        <label class="form-label"><i class="bi bi-flag"></i> Status</label>
+        <select name="status" class="form-select" id="statusSelect">
+            @{
+                var selectedStatus = ViewBag.SelectedStatus as string ?? "All";
+            }
+            <option value="All" selected="@(selectedStatus == "All")">All Statuses</option>
+            <option value="Pending" selected="@(selectedStatus == "Pending")">Pending</option>
+            <option value="Approved" selected="@(selectedStatus == "Approved")">Approved</option>
+            <option value="Rejected" selected="@(selectedStatus == "Rejected")">Rejected</option>
+        </select>
+    </div>
+ *@
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i> No claims available in the system.
+        </div>
+    }
+    else
+    {
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-graph-up"></i> Claims Overview</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                <h6 class="text-muted">Total Claims</h6>
+                                <h3 class="text-primary">@Model.Count</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-muted">Pending</h6>
+                                <h3 class="text-warning">@Model.Count(c => c.Status == "Pending")</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-muted">Approved</h6>
+                                <h3 class="text-success">@Model.Count(c => c.Status == "Approved")</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-muted">Rejected</h6>
+                                <h3 class="text-danger">@Model.Count(c => c.Status == "Rejected")</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0"><i class="bi bi-table"></i> All Claims</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Claim ID</th>
+                                <th>Lecturer</th>
+                                <th>Module</th>
+                                <th>Period</th>
+                                <th>Hours</th>
+                                <th>Rate</th>
+                                <th>Total Amount</th>
+                                <th>Status</th>
+                                <th>Submitted Date</th>
+                                <th>Last Modified</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var claim in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="@claim.ClaimId">
+                                            <small class="text-muted font-monospace">#@claim.ClaimId.Substring(0, 8)...</small>
+                                        </span>
+                                    </td>
+
+                                    <td><strong>@claim.LecturerDisplayName</strong></td>
+                                    <td>@claim.Module</td>
+                                    <td>@claim.Period</td>
+                                    <td class="text-end">@claim.HoursWorked</td>
+                                    <td class="text-end">@claim.HourlyRate.ToString("R #,##0.00")</td>
+                                    <td class="text-end"><strong>@claim.TotalAmount.ToString("R #,##0.00")</strong></td>
+                                    <td>
+                                        @if (claim.Status == "Pending")
+                                        {
+                                            <span class="badge bg-warning text-dark">
+                                                <i class="bi bi-clock"></i> Pending
+                                            </span>
+                                        }
+                                        else if (claim.Status == "Approved")
+                                        {
+                                            <span class="badge bg-success">
+                                                <i class="bi bi-check-circle"></i> Approved
+                                            </span>
+                                        }
+                                        else if (claim.Status == "Rejected")
+                                        {
+                                            <span class="badge bg-danger">
+                                                <i class="bi bi-x-circle"></i> Rejected
+                                            </span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <small>@claim.SubmittedDate.ToString("MMM dd, yyyy")</small><br />
+                                        <small class="text-muted">@claim.SubmittedDate.ToString("hh:mm tt")</small>
+                                    </td>
+                                    <td>
+                                        <small>@claim.LastModified.ToString("MMM dd, yyyy")</small><br />
+                                        <small class="text-muted">@claim.LastModified.ToString("hh:mm tt")</small>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <a asp-controller="ProjectCoordinator" asp-action="Details" asp-route-id="@claim.ClaimId"
+                                               class="btn btn-info" title="View Details">
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a asp-controller="ProjectCoordinator" asp-action="Edit" asp-route-id="@claim.ClaimId"
+                                               class="btn btn-warning" title="Edit Claim">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
+                                            <a asp-controller="ProjectCoordinator" asp-action="ChangeStatus" asp-route-id="@claim.ClaimId"
+                                               class="btn btn-primary" title="Change Status">
+                                                <i class="bi bi-arrow-repeat"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    });
+
+    // // Auto-submit on dropdown change
+    // document.getElementById('statusSelect').addEventListener('change', function() {
+    //     document.getElementById('filterForm').submit();
+    // });
+
+    // // Debug: Log the selected status
+    // console.log('Selected Status from ViewBag: @ViewBag.SelectedStatus');
+</script>

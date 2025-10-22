@@ -1,0 +1,335 @@
+﻿@model Contract_Claim_System.Models.Claim
+@{
+    ViewData["Title"] = "Submit New Claim";
+}
+
+<style>
+    
+    body {
+        background-color: #121212 !important; 
+        color: #e0e0e0; 
+    }
+
+    .card {
+        background-color: #1e1e1e; 
+        border: 1px solid #333;
+    }
+
+    .card-header.bg-primary {
+        background-color: #0d6efd !important; 
+        color: white;
+    }
+
+    .form-control, .form-control:focus {
+        background-color: #2c2c2c;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+        /* Readonly for Lecturer Details */
+        .form-control[readonly] {
+            background-color: #1e1e1e;
+            border: 1px solid #0d6efd; 
+            color: #c0c0c0;
+            opacity: 1; 
+        }
+
+    .input-group-text {
+        background-color: #2c2c2c;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+   
+    .bg-info-custom {
+        background-color: #0dcaf0 !important;
+        color: #1e1e1e !important;
+    }
+
+    .bg-warning-custom {
+        background-color: #ffc107 !important; 
+        color: #1e1e1e !important;
+    }
+
+    /* Total Amount Box */
+    .total-amount-box {
+        background-color: #181818 !important; 
+        border: 1px solid #0d6efd !important;
+    }
+</style>
+
+<div class="row mt-4">
+    <div class="col-lg-8">
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-primary text-white py-3">
+                <h4 class="mb-0"><i class="bi bi-journal-check me-2"></i> Claim Form</h4>
+            </div>
+            <div class="card-body">
+                <p class="text-white-50">Fill in the details below to submit your claim for review</p>
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error!</strong> @ViewBag.Error
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                <form asp-controller="Claims" asp-action="Submit" method="post" enctype="multipart/form-data" id="claimForm">
+
+                    <div class="mb-3">
+                        <label asp-for="LecturerDisplayName" class="form-label text-white">Lecturer Name</label>
+                        <input asp-for="LecturerDisplayName" type="text" class="form-control" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="LecturerName" class="form-label text-white-50">Your email address (automatically filled)</label>
+                        <input asp-for="LecturerName" type="text" class="form-control" placeholder="lecturer@test.com" readonly />
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="Module" class="form-label text-white">Module <span class="text-danger">*</span></label>
+                            <input asp-for="Module" type="text" class="form-control" placeholder="e.g., Computer Science 101" required />
+                            <span asp-validation-for="Module" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Period" class="form-label text-white">Period <span class="text-danger">*</span></label>
+                            <input asp-for="Period" type="text" class="form-control" placeholder="e.g., October 2025 (month/year)" required />
+                            <span asp-validation-for="Period" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="HoursWorked" class="form-label text-white">Hours Worked <span class="text-danger">*</span></label>
+                            <input asp-for="HoursWorked" type="number" step="0.01" class="form-control" id="hours-worked" placeholder="0" required />
+                            <span asp-validation-for="HoursWorked" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="HourlyRate" class="form-label text-white">Hourly Rate (R) <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text">R</span>
+                                <input asp-for="HourlyRate" type="number" step="0.01" class="form-control" id="hourly-rate" placeholder="0.00" required />
+                            </div>
+                            <span asp-validation-for="HourlyRate" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex justify-content-between align-items-center total-amount-box p-3 rounded">
+                        <strong class="text-white">Total Amount:</strong>
+                        <strong id="total-amount" class="text-success fs-4">R 0.00</strong>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Notes" class="form-label text-white">Notes <small class="text-white-50">(Optional)</small></label>
+                        <textarea asp-for="Notes" class="form-control" rows="3" placeholder="Additional notes or comments..."></textarea>
+                    </div>
+
+                    <hr class="text-white-50" />
+
+                    <h5 class="mt-4 mb-2 text-white">Supporting Document <small class="text-white-50">(Optional)</small></h5>
+                    <div class="alert alert-info py-2 bg-dark text-info border-info" role="alert">
+                        <i class="bi bi-paperclip"></i> Max 5MB. Allowed formats: .pdf, .docx, .xlsx, .txt.
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="document" class="form-label text-white">Upload Document</label>
+                        <input type="file" name="document" id="document" class="form-control"
+                               accept=".pdf, .docx, .xlsx, .txt" onchange="validateFile(this)">
+
+                        <div id="file-name-display" class="mt-2 text-success" style="display:none;">
+                            <i class="bi bi-check-circle-fill"></i> File Ready: <span id="uploaded-file-name"></span>
+                        </div>
+
+                        <div id="file-error-display" class="alert alert-danger mt-2" role="alert" style="display:none;">
+                            <i class="bi bi-exclamation-triangle-fill"></i> <span id="file-error-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg" id="submitButton">
+                            <i class="bi bi-send me-2"></i> Submit Claim
+                        </button>
+                    </div>
+                </form>
+
+                <div class="d-grid gap-2 mt-2">
+                    <a asp-controller="Claims" asp-action="Track" class="btn btn-secondary btn-lg">
+                        <i class="bi bi-list-ul me-2"></i> View My Claims
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card bg-info-custom text-dark mb-4 shadow-sm border-0">
+            <div class="card-header bg-info-custom border-0">
+                <h5 class="mb-0"><i class="bi bi-info-circle-fill me-2"></i> Instructions</h5>
+            </div>
+            <div class="card-body bg-black text-white">
+                <ol class="list-unstyled mb-0 small">
+                    <li>1. Enter the **module** you taught</li>
+                    <li>2. Specify the **period** (month/year)</li>
+                    <li>3. Enter total **hours worked**</li>
+                    <li>4. Enter your **hourly rate**</li>
+                    <li>5. Review the calculated **total**</li>
+                    <li>6. Click **Submit Claim**</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="card bg-warning-custom text-dark shadow-sm border-0">
+            <div class="card-header bg-warning-custom border-0">
+                <h5 class="mb-0"><i class="bi bi-exclamation-triangle-fill me-2"></i> Important</h5>
+            </div>
+            <div class="card-body bg-black text-white">
+                <ul class="list-unstyled mb-0 small">
+                    <li><i class="bi bi-dot"></i> All fields marked with **\*** are required</li>
+                    <li><i class="bi bi-dot"></i> Double-check your hours and rate</li>
+                    <li><i class="bi bi-dot"></i> Claims **cannot be edited** after submission</li>
+                    <li><i class="bi bi-dot"></i> You will be notified once processed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        const HOURS_INPUT = document.getElementById('hours-worked');
+        const RATE_INPUT = document.getElementById('hourly-rate');
+        const TOTAL_DISPLAY = document.getElementById('total-amount');
+
+        // Function to calculate and update the total amount
+        function updateTotalAmount() {
+            const hours = parseFloat(HOURS_INPUT.value) || 0;
+            const rate = parseFloat(RATE_INPUT.value) || 0;
+            const total = hours * rate;
+            TOTAL_DISPLAY.textContent = 'R ' + total.toFixed(2);
+        }
+
+        // Attach event listeners for input changes
+        HOURS_INPUT.addEventListener('input', updateTotalAmount);
+        RATE_INPUT.addEventListener('input', updateTotalAmount);
+
+        // Initial call to set total on page load
+        document.addEventListener('DOMContentLoaded', updateTotalAmount);
+
+        // File Validation Logic 
+
+        // PAGE RELOAD / SUBMISSION ERROR 
+        document.addEventListener('DOMContentLoaded', function() {
+            const submitButton = document.getElementById('submitButton');
+
+            if (submitButton && (submitButton.disabled || submitButton.textContent.includes('Submitting'))) {
+
+                // Check if the server-side error message is visible
+                const serverError = document.querySelector('.alert-danger strong');
+                if (serverError && serverError.textContent.includes('Error!')) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<i class="bi bi-send me-2"></i> Submit Claim';
+
+                    const fileNameDisplay = document.getElementById('file-name-display');
+                    const fileErrorDisplay = document.getElementById('file-error-display');
+                    if(fileNameDisplay) fileNameDisplay.style.display = 'none';
+                    if(fileErrorDisplay) fileErrorDisplay.style.display = 'none';
+                    const fileInput = document.getElementById('document');
+                    if(fileInput) fileInput.value = '';
+                }
+            }
+        });
+
+        const MAX_SIZE_MB = 5;
+        const MAX_SIZE_BYTES = MAX_SIZE_MB * 1024 * 1024;
+        const ALLOWED_EXTENSIONS = ['.pdf', '.docx', '.xlsx', '.txt'];
+
+        function validateFile(input) {
+            const fileNameDisplay = document.getElementById('file-name-display');
+            const uploadedFileName = document.getElementById('uploaded-file-name');
+            const fileErrorDisplay = document.getElementById('file-error-display');
+            const fileErrorText = document.getElementById('file-error-text');
+            const submitButton = document.getElementById('submitButton');
+
+            // Reset displays
+            fileErrorDisplay.style.display = 'none';
+            fileNameDisplay.style.display = 'none';
+            fileErrorText.textContent = '';
+
+            // Re-enable button assuming no other client-side errors
+            submitButton.disabled = false;
+
+
+            if (input.files.length > 0) {
+                const file = input.files[0];
+                const fileName = file.name;
+                const fileSize = file.size;
+                const fileExt = fileName.substring(fileName.lastIndexOf('.')).toLowerCase();
+
+                // Check file size
+                if (fileSize > MAX_SIZE_BYTES) {
+                    fileErrorText.textContent = `File "${fileName}" is too large (${(fileSize / (1024 * 1024)).toFixed(2)}MB). Maximum allowed size is ${MAX_SIZE_MB}MB. Please choose a smaller file.`;
+                    fileErrorDisplay.style.display = 'block';
+                    input.value = ''; // Clear the file input
+                    submitButton.disabled = true;
+                    return;
+                }
+
+                // Check file extension
+                if (!ALLOWED_EXTENSIONS.includes(fileExt)) {
+                    fileErrorText.textContent = `Invalid file type "${fileExt}". Only ${ALLOWED_EXTENSIONS.join(', ')} files are allowed. Please select a valid file.`;
+                    fileErrorDisplay.style.display = 'block';
+                    input.value = ''; // Clear the file input
+                    submitButton.disabled = true;
+                    return;
+                }
+
+                // File is valid
+                uploadedFileName.textContent = fileName;
+                fileNameDisplay.style.display = 'block';
+                submitButton.disabled = false;
+            } else {
+                // No file selected - this is okay since file is optional
+                submitButton.disabled = false;
+            }
+        }
+
+        // Prevent form submission if file is invalid (Keep this)
+        document.getElementById('claimForm').addEventListener('submit', function(e) {
+            const fileInput = document.getElementById('document');
+
+            // If a file is selected, validate it one more time
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const fileSize = file.size;
+                const fileName = file.name;
+                const fileExt = fileName.substring(fileName.lastIndexOf('.')).toLowerCase();
+
+                if (fileSize > MAX_SIZE_BYTES) {
+                    e.preventDefault();
+                    alert(`❌ Cannot submit: File is too large (${(fileSize / (1024 * 1024)).toFixed(2)}MB). Maximum size is ${MAX_SIZE_MB}MB.`);
+                    return false;
+                }
+
+                if (!ALLOWED_EXTENSIONS.includes(fileExt)) {
+                    e.preventDefault();
+                    alert(`❌ Cannot submit: Invalid file type "${fileExt}". Only ${ALLOWED_EXTENSIONS.join(', ')} files are allowed.`);
+                    return false;
+                }
+            }
+
+            // Show loading state
+            const submitButton = document.getElementById('submitButton');
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Submitting...';
+        });
+
+    </script>
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">

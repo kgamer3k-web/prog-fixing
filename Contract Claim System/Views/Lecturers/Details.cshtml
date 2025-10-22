@@ -1,0 +1,30 @@
+﻿@model Contract_Claim_System.Models.Lecturer
+@{
+    ViewData["Title"] = "Lecturer Details";
+}
+
+<div class="card mt-4 shadow">
+    <div class="card-header bg-info text-white">
+        <h3 class="mb-0"><i class="bi bi-person-badge"></i> Lecturer Details</h3>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Name:</dt>
+            <dd class="col-sm-9"><strong>@Model.Name</strong></dd>
+
+            <dt class="col-sm-3">Employee ID:</dt>
+            <dd class="col-sm-9"><span class="badge bg-secondary">@Model.EmployeeId</span></dd>
+
+            <dt class="col-sm-3">Email:</dt>
+            <dd class="col-sm-9">@(string.IsNullOrEmpty(Model.Email) || Model.Email == "N/A" ? "No email" : Model.Email)</dd>
+
+            <dt class="col-sm-3">Total Claims:</dt>
+            <dd class="col-sm-9"><span class="badge bg-primary">@Model.TotalClaims</span></dd>
+        </dl>
+    </div>
+    <div class="card-footer d-flex justify-content-end">
+        <a asp-action="Index" class="btn btn-secondary me-2"><i class="bi bi-arrow-left"></i> Back to List</a>
+        <a asp-action="Edit" asp-route-id="@Model.EmployeeId" class="btn btn-warning me-2"><i class="bi bi-pencil"></i> Edit</a>
+        <a asp-action="Delete" asp-route-id="@Model.EmployeeId" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete @Model.Name?')"><i class="bi bi-trash"></i> Delete</a>
+    </div>
+</div>

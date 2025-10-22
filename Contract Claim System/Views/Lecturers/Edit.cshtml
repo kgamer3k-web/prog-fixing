@@ -1,0 +1,43 @@
+﻿@model Contract_Claim_System.Models.Lecturer
+@{
+    ViewData["Title"] = "Edit Lecturer";
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card mt-4 shadow">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="mb-0"><i class="bi bi-pencil-square"></i> Edit Lecturer</h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit" method="post">
+
+                    @* hidden field to pass the permanent EmployeeId to the POST action *@
+                    <input type="hidden" asp-for="EmployeeId" />
+
+                    <div class="mb-3">
+                        <label class="form-label">Employee ID (Read-only)</label>
+                        <input type="text" class="form-control" value="@Model.EmployeeId" readonly style="background-color: #e9ecef;" />
+                        <div class="form-text">This value is permanent and cannot be changed.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label">Full Name</label>
+                        <input asp-for="Name" type="text" class="form-control" value="@Model.Name" required />
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <input asp-for="Email" type="email" class="form-control" value="@Model.Email" />
+                        <div class="form-text">Optional: Used for claim tracking</div>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a asp-action="Index" class="btn btn-secondary me-2"><i class="bi bi-x-circle"></i> Cancel</a>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

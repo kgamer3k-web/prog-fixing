@@ -1,0 +1,28 @@
+[
+  {
+    "ClaimId": "eb5c62b1-ac78-416e-ae04-60c168d59999",
+    "LecturerName": "",
+    "LecturerDisplayName": "",
+    "Module": "",
+    "TotalAmount": 0,
+    "PreviousStatus": "Approved",
+    "CurrentStatus": "Approved",
+    "NewStatus": "Rejected",
+    "Reason": "Approve to reject status change",
+    "ChangedBy": "j.carter@uni.co",
+    "ChangedDate": "2025-10-22T03:37:12.7360503+02:00"
+  },
+  {
+    "ClaimId": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+    "LecturerName": "",
+    "LecturerDisplayName": "",
+    "Module": "",
+    "TotalAmount": 0,
+    "PreviousStatus": "Approved",
+    "CurrentStatus": "Approved",
+    "NewStatus": "Rejected",
+    "Reason": "Reject claim for showcasing",
+    "ChangedBy": "j.carter@uni.co",
+    "ChangedDate": "2025-10-22T04:08:01.4152764+02:00"
+  }
+]

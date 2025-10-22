@@ -1,0 +1,43 @@
+﻿@model List<Contract_Claim_System.Models.Claim>
+@{
+    ViewData["Title"] = "Academic Manager - Claims Report";
+    var lecturers = Contract_Claim_System.Data.InMemoryDb.Lecturers;
+}
+<h2>Claims Report</h2>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Claim ID</th>
+            <th>Lecturer Name</th>
+            <th>Lecturer Email</th>
+            <th>Module</th>
+            <th>Period</th>
+            <th>Hours</th>
+            <th>Rate</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Submitted</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.ClaimId</td>
+                {{-- FIX: Display the user's entered name --}}
+                <td>@c.LecturerDisplayName</td>
+                <td>
+                    {{-- FIX: Display the email directly from the claim object --}}
+                    <span>@c.LecturerName</span>
+                </td>
+                <td>@c.Module</td>
+                <td>@c.Period</td>
+                <td>@c.HoursWorked</td>
+                <td>@c.HourlyRate</td>
+                <td>@c.TotalAmount</td>
+                <td>@c.Status</td>
+                <td>@c.SubmittedDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

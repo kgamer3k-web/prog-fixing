@@ -1,0 +1,741 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\data\\claims.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:data\\claims.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\data\\admin.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:data\\admin.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\data\\coordinators.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:data\\coordinators.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\controllers\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:controllers\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\shared\\_navigation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\shared\\_navigation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\lecturers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\lecturers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\data\\inmemorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:data\\inmemorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\data\\lecturers.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:data\\lecturers.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\projectcoordinator\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\projectcoordinator\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\controllers\\projectcoordinatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:controllers\\projectcoordinatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\models\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:models\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\lecturers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\lecturers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\data\\status_changes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:data\\status_changes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\claims\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\claims\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\reports\\claims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\reports\\claims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\projectcoordinator\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\projectcoordinator\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\projectcoordinator\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\projectcoordinator\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\projectcoordinator\\changestatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\projectcoordinator\\changestatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\lecturers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\lecturers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\lecturers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\lecturers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\claims\\track.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\claims\\track.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\claims\\submit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\claims\\submit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\views\\claims\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:views\\claims\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\services\\ifilestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:services\\ifilestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\services\\filestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:services\\filestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\models\\claimstatuschange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:models\\claimstatuschange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|c:\\users\\kenne\\documents\\github\\prog6212-part2-st10197888\\contract claim system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33C4CFBB-06E0-4222-9CB9-22031150D016}|Contract Claim System.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|UnitTestProject||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kenne\\source\\repos\\UnitTestProject\\UnitTest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "admin.txt",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\admin.txt",
+              "RelativeDocumentMoniker": "Data\\admin.txt",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\admin.txt",
+              "RelativeToolTip": "Data\\admin.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-13T23:55:06.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "claims.json",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\claims.json",
+              "RelativeDocumentMoniker": "Data\\claims.json",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\claims.json",
+              "RelativeToolTip": "Data\\claims.json",
+              "ViewState": "AgIAAMcBAAAAAAAAAAAuwN8BAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-14T01:53:15.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "coordinators.txt",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\coordinators.txt",
+              "RelativeDocumentMoniker": "Data\\coordinators.txt",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\coordinators.txt",
+              "RelativeToolTip": "Data\\coordinators.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-18T23:51:50.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Navigation.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Shared\\_Navigation.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Navigation.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Shared\\_Navigation.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Navigation.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAADwv1wAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-14T00:38:50.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowB4AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:42:27.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAwwGkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:42:06.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LecturersController.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\LecturersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LecturersController.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\LecturersController.cs",
+              "RelativeToolTip": "Controllers\\LecturersController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwNQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:42:25.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InMemoryDb.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\InMemoryDb.cs",
+              "RelativeDocumentMoniker": "Data\\InMemoryDb.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\InMemoryDb.cs",
+              "RelativeToolTip": "Data\\InMemoryDb.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:51:06.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Lecturers\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Lecturers\\Details.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Lecturers\\Details.cshtml",
+              "RelativeToolTip": "Views\\Lecturers\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T21:02:48.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABkBAAAAAAAAAADwvzEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-14T00:14:44.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "lecturers.txt",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\lecturers.txt",
+              "RelativeDocumentMoniker": "Data\\lecturers.txt",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\lecturers.txt",
+              "RelativeToolTip": "Data\\lecturers.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-13T23:55:04.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "users.txt",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\users.txt",
+              "RelativeDocumentMoniker": "Data\\users.txt",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\users.txt",
+              "RelativeToolTip": "Data\\users.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-13T23:55:00.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:44:25.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Reports\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reports\\Index.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Reports\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reports\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-14T01:17:49.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\ProjectCoordinator\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectCoordinator\\Index.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\ProjectCoordinator\\Index.cshtml",
+              "RelativeToolTip": "Views\\ProjectCoordinator\\Index.cshtml",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAAAKwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T23:20:41.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProjectCoordinatorController.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\ProjectCoordinatorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectCoordinatorController.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\ProjectCoordinatorController.cs",
+              "RelativeToolTip": "Controllers\\ProjectCoordinatorController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T00:20:51.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Lecturer.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\Lecturer.cs",
+              "RelativeDocumentMoniker": "Models\\Lecturer.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\Lecturer.cs",
+              "RelativeToolTip": "Models\\Lecturer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:41:48.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ClaimsController.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\ClaimsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\ClaimsController.cs",
+              "RelativeToolTip": "Controllers\\ClaimsController.cs",
+              "ViewState": "AgIAAGwBAAAAAAAAAAAuwHoBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:42:17.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FileHelper.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Helper\\FileHelper.cs",
+              "RelativeDocumentMoniker": "Helper\\FileHelper.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Helper\\FileHelper.cs",
+              "RelativeToolTip": "Helper\\FileHelper.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAcwIMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:47:44.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Lecturers\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Lecturers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Lecturers\\Create.cshtml",
+              "RelativeToolTip": "Views\\Lecturers\\Create.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwCwAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T21:43:44.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "status_changes.json",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\status_changes.json",
+              "RelativeDocumentMoniker": "Data\\status_changes.json",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Data\\status_changes.json",
+              "RelativeToolTip": "Data\\status_changes.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-19T00:37:25.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Claims\\List.cshtml",
+              "RelativeDocumentMoniker": "Views\\Claims\\List.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Claims\\List.cshtml",
+              "RelativeToolTip": "Views\\Claims\\List.cshtml",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAKAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T21:43:30.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T21:43:56.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Claims.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Reports\\Claims.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reports\\Claims.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Reports\\Claims.cshtml",
+              "RelativeToolTip": "Views\\Reports\\Claims.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T22:19:37.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\ProjectCoordinator\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectCoordinator\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\ProjectCoordinator\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ProjectCoordinator\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T23:20:58.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\ProjectCoordinator\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectCoordinator\\Details.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\ProjectCoordinator\\Details.cshtml",
+              "RelativeToolTip": "Views\\ProjectCoordinator\\Details.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAANUAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T23:48:19.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ChangeStatus.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\ProjectCoordinator\\ChangeStatus.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectCoordinator\\ChangeStatus.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\ProjectCoordinator\\ChangeStatus.cshtml",
+              "RelativeToolTip": "Views\\ProjectCoordinator\\ChangeStatus.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-19T00:35:38.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Lecturers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Lecturers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Lecturers\\Index.cshtml",
+              "RelativeToolTip": "Views\\Lecturers\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-14T01:20:13.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Lecturers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Lecturers\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Lecturers\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Lecturers\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T21:07:44.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-21T23:49:18.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T22:21:07.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T21:43:13.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T21:43:05.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Track.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Claims\\Track.cshtml",
+              "RelativeDocumentMoniker": "Views\\Claims\\Track.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Claims\\Track.cshtml",
+              "RelativeToolTip": "Views\\Claims\\Track.cshtml",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAAEQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T22:29:10.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Submit.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Claims\\Submit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Claims\\Submit.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Claims\\Submit.cshtml",
+              "RelativeToolTip": "Views\\Claims\\Submit.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T21:43:21.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Claims\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Claims\\Details.cshtml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Views\\Claims\\Details.cshtml",
+              "RelativeToolTip": "Views\\Claims\\Details.cshtml",
+              "ViewState": "AgIAADgBAAAAAAAAAAAAAAEBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-14T01:40:14.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IFileStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Services\\IFileStorageService.cs",
+              "RelativeDocumentMoniker": "Services\\IFileStorageService.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Services\\IFileStorageService.cs",
+              "RelativeToolTip": "Services\\IFileStorageService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T15:52:47.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "FileStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Services\\FileStorageService.cs",
+              "RelativeDocumentMoniker": "Services\\FileStorageService.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Services\\FileStorageService.cs",
+              "RelativeToolTip": "Services\\FileStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T15:53:01.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:41:30.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:48:46.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ClaimStatusChange.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\ClaimStatusChange.cs",
+              "RelativeDocumentMoniker": "Models\\ClaimStatusChange.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\ClaimStatusChange.cs",
+              "RelativeToolTip": "Models\\ClaimStatusChange.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T00:22:32.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Claim.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\Claim.cs",
+              "RelativeDocumentMoniker": "Models\\Claim.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Models\\Claim.cs",
+              "RelativeToolTip": "Models\\Claim.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:41:55.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog6212-part2-ST10197888\\Contract Claim System\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T21:51:28.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UnitTestProject",
+              "DocumentMoniker": "C:\\Users\\kenne\\source\\repos\\UnitTestProject\\UnitTestProject.csproj",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\UnitTestProject\\UnitTestProject.csproj",
+              "ToolTip": "C:\\Users\\kenne\\source\\repos\\UnitTestProject\\UnitTestProject.csproj",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\UnitTestProject\\UnitTestProject.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-21T01:05:53.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\source\\repos\\UnitTestProject\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\UnitTestProject\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\kenne\\source\\repos\\UnitTestProject\\UnitTest1.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\UnitTestProject\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T01:05:40.898Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

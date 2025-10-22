@@ -1,0 +1,11 @@
+Lindiwe Dlamini,Lec-001,lindiwe.d@uni.co
+Michael Chen,Lec-002,mchen@uni.co
+Thabo Skhosana,Lec-003,t.skhosana@uni.co
+Chloe Smith,Lec-004,chloe.s@uni.co
+Daniel Johnson,Lec-005,danielj@uni.co
+Fatima Khan,Lec-006,fatima.k@uni.co
+Sipho Zola,Lec-007,szola@uni.co
+Emma Brown,Lec-008,e.brown@uni.co
+lecturer@test.com,lecturer123,N/A
+danielj@uni.co,lecturer123,N/A
+danielj@uni.co,lecturer123

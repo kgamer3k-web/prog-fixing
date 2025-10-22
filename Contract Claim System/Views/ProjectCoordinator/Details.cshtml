@@ -1,0 +1,226 @@
+﻿@model Contract_Claim_System.Models.Claim
+@{
+    ViewData["Title"] = "Claim Details";
+    var statusChanges = ViewBag.StatusChanges as List<Contract_Claim_System.Models.ClaimStatusChange>;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2><i class="bi bi-file-earmark-text"></i> Claim Details</h2>
+        <p class="text-muted">Complete information and status history</p>
+    </div>
+    <div>
+        <a asp-controller="ProjectCoordinator" asp-action="Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show">
+        <i class="bi bi-check-circle"></i> @TempData["Message"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-info-circle"></i> Claim Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="text-muted">Claim ID</label>
+                        <p class="fw-bold"><code>@Model.ClaimId</code></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted">Status</label>
+                        <p>
+                            @if (Model.Status == "Pending")
+                            {
+                                <span class="badge bg-warning text-dark fs-6">
+                                    <i class="bi bi-clock"></i> Pending
+                                </span>
+                            }
+                            else if (Model.Status == "Approved")
+                            {
+                                <span class="badge bg-success fs-6">
+                                    <i class="bi bi-check-circle"></i> Approved
+                                </span>
+                            }
+                            else if (Model.Status == "Rejected")
+                            {
+                                <span class="badge bg-danger fs-6">
+                                    <i class="bi bi-x-circle"></i> Rejected
+                                </span>
+                            }
+                        </p>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <dt class="col-sm-3">Lecturer</dt>
+                        <dd class="col-sm-9">@Model.LecturerDisplayName</dd>
+                    <div class="col-md-6">
+                        <label class="text-muted">Module</label>
+                        <p><span class="badge bg-info fs-6">@Model.Module</span></p>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="text-muted">Period</label>
+                        <p class="fw-bold">@Model.Period</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted">Hours Worked</label>
+                        <p class="fw-bold text-primary">@Model.HoursWorked hours</p>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="text-muted">Hourly Rate</label>
+                        <p class="fw-bold">@Model.HourlyRate.ToString("C")</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="text-muted">Total Amount</label>
+                        <p class="fw-bold text-success fs-4">@Model.TotalAmount.ToString("C")</p>
+                    </div>
+                </div>
+
+                <hr />
+
+                
+
+                @if (!string.IsNullOrEmpty(Model.Notes))
+                {
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <label class="text-muted">Notes</label>
+                            <p class="border rounded p-2 bg-light">@Model.Notes</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        @if (statusChanges != null && statusChanges.Any())
+        {
+            <div class="card shadow">
+                <div class="card-header" style="background-color: #6f42c1; color: white;">
+                    <h5 class="mb-0"><i class="bi bi-clock-history"></i> Status Change History</h5>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        @foreach (var change in statusChanges)
+                        {
+                            <div class="mb-4 border-start border-3 ps-3" style="border-color: #6f42c1 !important;">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-1">
+                                        <span class="badge bg-secondary">@change.PreviousStatus</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                        @if (change.NewStatus == "Approved")
+                                        {
+                                            <span class="badge bg-success">@change.NewStatus</span>
+                                        }
+                                        else if (change.NewStatus == "Rejected")
+                                        {
+                                            <span class="badge bg-danger">@change.NewStatus</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning text-dark">@change.NewStatus</span>
+                                        }
+                                    </h6>
+                                    <small class="text-muted">@change.ChangedDate.ToString("MMM dd, yyyy hh:mm tt")</small>
+                                </div>
+                                <p class="mb-1"><strong>Reason:</strong> @change.Reason</p>
+                                <small class="text-muted">Changed by: @change.ChangedBy</small>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0"><i class="bi bi-gear"></i> Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a asp-controller="ProjectCoordinator" asp-action="Edit" asp-route-id="@Model.ClaimId"
+                       class="btn btn-warning">
+                        <i class="bi bi-pencil"></i> Edit Claim
+                    </a>
+                    <a asp-controller="ProjectCoordinator" asp-action="ChangeStatus" asp-route-id="@Model.ClaimId"
+                       class="btn" style="background-color: #6f42c1; color: white;">
+                        <i class="bi bi-arrow-repeat"></i> Change Status
+                    </a>
+                    <hr />
+                    @if (Model.Status == "Pending")
+                    {
+                        <a asp-controller="Claims" asp-action="Approve" asp-route-id="@Model.ClaimId"
+                           class="btn btn-success" onclick="return confirm('Are you sure you want to approve this claim?')">
+                            <i class="bi bi-check-circle"></i> Quick Approve
+                        </a>
+                        <a asp-controller="Claims" asp-action="Reject" asp-route-id="@Model.ClaimId"
+                           class="btn btn-danger" onclick="return confirm('Are you sure you want to reject this claim?')">
+                            <i class="bi bi-x-circle"></i> Quick Reject
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0"><i class="bi bi-clock"></i> Timestamps</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="text-muted small">Submitted Date</label>
+                    <p class="mb-0">@Model.SubmittedDate.ToString("MMMM dd, yyyy")</p>
+                    <small class="text-muted">@Model.SubmittedDate.ToString("hh:mm tt")</small>
+                </div>
+
+                <div class="mb-3">
+                    <label class="text-muted small">Submitted By</label>
+                    <p class="mb-0">@Model.SubmittedBy</p>
+                    <small class="text-muted">Role: @Model.SubmittedByRole</small>
+                </div>
+
+                @if (Model.ProcessedDate.HasValue)
+                {
+                    <div class="mb-3">
+                        <label class="text-muted small">Processed Date</label>
+                        <p class="mb-0">@Model.ProcessedDate.Value.ToString("MMMM dd, yyyy")</p>
+                        <small class="text-muted">@Model.ProcessedDate.Value.ToString("hh:mm tt")</small>
+                    </div>
+                }
+
+                <div class="mb-3">
+                    <label class="text-muted small">Last Modified</label>
+                    <p class="mb-0">@Model.LastModified.ToString("MMMM dd, yyyy")</p>
+                    <small class="text-muted">@Model.LastModified.ToString("hh:mm tt")</small>
+                </div>
+
+                <div class="mb-0">
+                    <label class="text-muted small">Modified By</label>
+                    <p class="mb-0">@Model.ModifiedBy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">

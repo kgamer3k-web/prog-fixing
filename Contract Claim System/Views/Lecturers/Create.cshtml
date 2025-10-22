@@ -1,0 +1,63 @@
+﻿@model Contract_Claim_System.Models.Lecturer
+@{
+    ViewData["Title"] = "Add Lecturer";
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-header">
+                <h3><i class="bi bi-person-plus"></i> Add New Lecturer</h3>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @ViewBag.Error
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                @if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @ViewBag.Message
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                <form asp-controller="Lecturers" asp-action="Create" method="post">
+
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                        <input asp-for="Name" type="text" class="form-control" required placeholder="e.g., John Doe">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    @* Employee ID is now auto-generated *@
+                    <div class="alert alert-info" role="alert">
+                        <i class="bi bi-info-circle"></i> Employee ID will be automatically generated as **Lec-XXX**.
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label">Email Address</label>
+                        <input asp-for="Email" type="email" class="form-control" placeholder="lecturer@example.com">
+                        <div class="form-text">Optional: Used for claim tracking</div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Add Lecturer</button>
+                        <a asp-controller="Lecturers" asp-action="Index" class="btn btn-secondary"><i class="bi bi-x-circle"></i> Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

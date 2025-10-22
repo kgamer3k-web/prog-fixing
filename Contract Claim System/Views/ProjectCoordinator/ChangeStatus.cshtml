@@ -1,0 +1,150 @@
+﻿@model Contract_Claim_System.Models.ClaimStatusChange
+@{
+    ViewData["Title"] = "Change Claim Status";
+    var currencyFormat = "R #,##0.00";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2><i class="bi bi-arrow-repeat"></i> Change Claim Status</h2>
+        <p class="text-muted">Update status with mandatory reason</p>
+    </div>
+    <div>
+        <a asp-controller="ProjectCoordinator" asp-action="Details" asp-route-id="@Model.ClaimId" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Details
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header" style="background-color: #6f42c1; color: white;">
+                <h5 class="mb-0"><i class="bi bi-pencil-square"></i> Status Change Form</h5>
+            </div>
+            <div class="card-body">
+                <form asp-controller="ProjectCoordinator" asp-action="ChangeStatus" method="post">
+                    <input type="hidden" asp-for="ClaimId" />
+                    <input type="hidden" asp-for="CurrentStatus" />
+                    @* REMOVED hidden fields: LecturerDisplayName, Module, TotalAmount *@
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle"></i> @ViewBag.Error
+                        </div>
+                    }
+
+                    <div class="mb-4">
+                        <label class="form-label"><strong>Current Status:</strong></label>
+                        <div>
+                            @if (Model.CurrentStatus == "Pending")
+                            {
+                                <span class="badge bg-warning text-dark fs-5">
+                                    <i class="bi bi-clock"></i> Pending
+                                </span>
+                            }
+                            else if (Model.CurrentStatus == "Approved")
+                            {
+                                <span class="badge bg-success fs-5">
+                                    <i class="bi bi-check-circle"></i> Approved
+                                </span>
+                            }
+                            else if (Model.CurrentStatus == "Rejected")
+                            {
+                                <span class="badge bg-danger fs-5">
+                                    <i class="bi bi-x-circle"></i> Rejected
+                                </span>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="NewStatus" class="form-label">
+                            New Status <span class="text-danger">*</span>
+                        </label>
+                        <select asp-for="NewStatus" class="form-select form-select-lg" required>
+                            <option value="">-- Select New Status --</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                        <span asp-validation-for="NewStatus" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="Reason" class="form-label">
+                            Reason for Status Change <span class="text-danger">*</span>
+                        </label>
+                        <textarea asp-for="Reason" class="form-control" rows="6"
+                                  placeholder="Please provide a detailed reason for this status change..." required></textarea>
+                        <span asp-validation-for="Reason" class="text-danger"></span>
+                        <small class="form-text text-muted">
+                            <i class="bi bi-info-circle"></i> This reason will be recorded in the claim's history.
+                        </small>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <i class="bi bi-exclamation-circle"></i>
+                        <strong>Important:</strong> Status changes are permanent and will be recorded with your name and timestamp.
+                    </div>
+
+                    <hr />
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a asp-controller="ProjectCoordinator" asp-action="Details" asp-route-id="@Model.ClaimId"
+                           class="btn btn-secondary btn-lg">
+                            <i class="bi bi-x-circle"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-lg" style="background-color: #6f42c1; color: white;">
+                            <i class="bi bi-check-circle"></i> Confirm Status Change
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-file-text"></i> Claim Summary</h5>
+            </div>
+            <div class="card-body">
+                <p class="mb-2"><strong>Claim ID:</strong></p>
+                <p class="text-muted"><code>@Model.ClaimId</code></p>
+
+                <p class="mb-2"><strong>Lecturer:</strong></p>
+                <p class="text-muted">@Model.LecturerDisplayName</p>
+
+                <p class="mb-2"><strong>Module:</strong></p>
+                <p><span class="badge bg-info">@Model.Module</span></p>
+
+                <p class="mb-2"><strong>Total Amount:</strong></p>
+                <p class="text-success fs-5"><strong>@Model.TotalAmount.ToString(currencyFormat)</strong></p>
+            </div>
+        </div>
+
+        <div class="card shadow">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0"><i class="bi bi-shield-exclamation"></i> Guidelines</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li class="mb-2">Always provide a clear reason for status changes</li>
+                    <li class="mb-2">Status changes are tracked and auditable</li>
+                    <li class="mb-2">New status cannot be the same as current status</li>
+                    <li class="mb-0">All changes are permanent and logged</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

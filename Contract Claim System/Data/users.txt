@@ -1,0 +1,17 @@
+[
+  {
+    "Email": "admin@test.com",
+    "Password": "admin123",
+    "Role": "Academic Manager"
+  },
+  {
+    "Email": "lecturer@test.com",
+    "Password": "lecturer123",
+    "Role": "Lecturer"
+  },
+  {
+    "Email": "coordinator@test.com",
+    "Password": "coordinator123",
+    "Role": "Project Coordinator"
+  },
+]

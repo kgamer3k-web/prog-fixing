@@ -1,0 +1,69 @@
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.AssemblyInfoInputs.cache
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.AssemblyInfo.cs
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.csproj.CoreCompileInputs.cache
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.RazorAssemblyInfo.cache
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.RazorAssemblyInfo.cs
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\appsettings.json
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\Data\status_changes.json
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\Contract Claim System.staticwebassets.runtime.json
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\Contract Claim System.staticwebassets.endpoints.json
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\Contract Claim System.exe
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\Contract Claim System.deps.json
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\Contract Claim System.runtimeconfig.json
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\Contract Claim System.dll
+C:\Users\kenne\source\repos\Contract Claim System\bin\Debug\net8.0\Contract Claim System.pdb
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\scopedcss\bundle\Contract Claim System.styles.css
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\scopedcss\projectbundle\Contract Claim System.bundle.scp.css
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.dll
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\refint\Contract Claim System.dll
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.pdb
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\Contract Claim System.genruntimeconfig.cache
+C:\Users\kenne\source\repos\Contract Claim System\obj\Debug\net8.0\ref\Contract Claim System.dll
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\appsettings.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\Data\status_changes.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\Contract Claim System.staticwebassets.endpoints.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\Contract Claim System.staticwebassets.runtime.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\Contract Claim System.exe
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\Contract Claim System.deps.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\Contract Claim System.runtimeconfig.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\Contract Claim System.dll
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\bin\Debug\net8.0\Contract Claim System.pdb
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.AssemblyInfoInputs.cache
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.AssemblyInfo.cs
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.csproj.CoreCompileInputs.cache
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.RazorAssemblyInfo.cache
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.RazorAssemblyInfo.cs
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.sourcelink.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\scopedcss\bundle\Contract Claim System.styles.css
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\scopedcss\projectbundle\Contract Claim System.bundle.scp.css
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.dll
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\refint\Contract Claim System.dll
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.pdb
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\Contract Claim System.genruntimeconfig.cache
+C:\Users\kenne\Documents\GitHub\prog6212-part2-ST10197888\Contract Claim System\obj\Debug\net8.0\ref\Contract Claim System.dll
