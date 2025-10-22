@@ -1,0 +1,25 @@
+[
+  {
+    "ClaimId": "35df8858-5ac6-497d-a427-57539a4eb2cc",
+    "LecturerName": "lect@example.com",
+    "LecturerDisplayName": "lect@example.com",
+    "Module": "M1",
+    "Period": "P1",
+    "HoursWorked": 2,
+    "HourlyRate": 10,
+    "TotalAmount": 20,
+    "Notes": "",
+    "Status": "Pending",
+    "SubmittedDate": "2025-10-22T16:28:19.5629835+02:00",
+    "SubmittedBy": "lect@example.com",
+    "SubmittedByRole": "Lecturer",
+    "LastModified": "2025-10-22T16:28:19.5630122+02:00",
+    "ModifiedBy": null,
+    "ProcessedDate": null,
+    "ApprovedBy": null,
+    "RejectedBy": null,
+    "DocumentData": "No_Attachment_Submitted_25333",
+    "DocumentFileName": "No_Attachment_Submitted",
+    "DocumentContentType": "custom/text-placeholder"
+  }
+]
